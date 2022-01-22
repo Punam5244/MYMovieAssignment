@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_margin="2dp">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="@dimen/_10dp"
+    app:cardElevation="5dp"
+    android:layout_centerInParent="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center_vertical"
+        android:background="@drawable/buttonback">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_centerHorizontal="true"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_icon" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id = "@+id/txt_movie_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"
+            android:textSize="15sp"
+            android:text = "Sholay"
+            android:textColor="@color/black"
+            android:singleLine = "true" />
+
+        <TextView
+            android:id = "@+id/txt_movie_year"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:padding = "5dp"
+            android:textColor="@color/black"
+            android:text = "1975"
+            android:singleLine = "true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>
